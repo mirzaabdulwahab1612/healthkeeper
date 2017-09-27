@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_margin="10dp"
+    android:background="@android:color/white">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/testreportResultTitle"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/testreport_result_edittxt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/testreportResultTitle"
+        android:textColorHint="@android:color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_above="@+id/toolbar">
+
+        <EditText
+            android:id="@+id/testreport_result_edittxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#50c5c5c5"
+            android:inputType="textMultiLine"
+            android:gravity="top|left"
+            android:padding="5dp"
+            android:hint="Enter a quick summury of the test result..."
+            android:scrollbars="vertical"
+            />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="right"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/testreport_result_filename"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp"
+            autofit:minTextSize="16sp"
+            android:text="File Attached: null"
+            />
+
+        <ImageButton
+            android:id="@+id/testreport_result_delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_delete"/>
+        <ImageButton
+            android:id="@+id/testreport_result_attach"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_attach"/>
+        <ImageButton
+            android:id="@+id/testreport_result_done"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:tag="Done"
+            android:clickable="true"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_done"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

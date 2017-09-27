@@ -1,0 +1,126 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jankhan.healthkeeper.GeneralHealth">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/general_layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_alignParentTop="true"
+                >
+
+                <TextView
+                    android:id="@+id/general_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Name: "
+                    android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/general_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Sex: "
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/general_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Age: "
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/general_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Info: "
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/general_layout_info"
+                android:layout_margin="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/general_graph_hr"
+                        android:layout_alignParentTop="true"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical"
+                        android:text="Daily resting heartrate"
+                        android:textSize="16sp" />
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/general_fab_hr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:clickable="true"
+                        app:fabSize="mini"
+                        app:srcCompat="@android:drawable/ic_input_add" />
+                    <com.jjoe64.graphview.GraphView
+                        android:id="@+id/general_graph_hr"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/general_fab_hr"
+                        android:layout_height="200dip"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_alignParentTop="true"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical"
+                        android:text="Weight"
+                        android:layout_above="@+id/general_graph_wt" />
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/general_fab_wt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:clickable="true"
+                        app:fabSize="mini"
+                        app:srcCompat="@android:drawable/ic_input_add" />
+                    <com.jjoe64.graphview.GraphView
+                        android:id="@+id/general_graph_wt"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/general_fab_wt"
+                        android:layout_height="200dip"/>
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
